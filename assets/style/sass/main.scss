@@ -1,0 +1,26 @@
+// fonts
+@import "fonts/google";
+@import "fonts/fa/font-awesome";
+
+// bootstrap
+@import "libs/bootstrap/bootstrap-flex";
+
+// variables
+@import "variables/colors";
+@import "variables/fonts";
+
+// mixins
+@import "mixins/padding";
+@import "mixins/margin";
+
+// components
+@import "components/menubar-icon";
+
+// parts
+@import "parts/header";
+@import "parts/right-menu";
+
+body {
+    font-family: $roboto;
+    background-color: $color-background-ec;
+}

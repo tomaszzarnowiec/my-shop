@@ -1,0 +1,30 @@
+menubar-icon {
+    cursor: pointer;
+
+    .menubar-icon {
+
+        width: 20px;
+        height: 2px;
+        background: $color-grey-3;
+        position: relative;
+        margin-top: -8px;
+
+        &:before, &:after {
+            background: $color-grey-3;
+            height: 2px;
+            position: absolute;
+            content: '';
+        }
+
+        &:before {
+            width: 15px;
+            top: -6px;
+        }
+
+        &:after {
+            width: 17px;
+            top: 6px;
+        }
+
+    }
+}

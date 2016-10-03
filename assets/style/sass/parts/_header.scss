@@ -1,0 +1,39 @@
+header {
+    height: 100px;
+    background: transparent;
+    padding: 0px 5%;
+    font-family: $roboto;
+
+    .container-fluid, .row {
+        height: 100%;
+    }
+
+    .logo, .menu {
+        display: flex;
+        align-items: center;
+    }
+
+    .menu {
+        justify-content: flex-end;
+
+        ul {
+            list-style: none;
+
+            li {
+                display: inline-block;
+                margin-left: 40px;
+                font-size: 20px;
+
+                a {
+                    text-decoration: none;
+                    color: $color-grey-5;
+
+                    img {
+                        width: 25px;
+                        height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

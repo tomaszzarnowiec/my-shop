@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html ng-app="mitoApp">
+    <head>
+        <meta charset="utf-8">
+        <title>T-Shirt Shop</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/assets/style/css/main.css">
+    </head>
+    <body ng-controller="MainController">
+
+        <header>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-6 logo">
+                        <h2>MITO</h2>
+                    </div>
+                    <div class="col-xs-6 menu">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    <!-- <img src="assets/images/home.svg" alt="homepage" /> -->
+                                    <i class="fa fa-reply"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <!-- <img src="assets/images/search.svg" alt="search" /> -->
+                                    <i class="fa fa-search"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" ng-click="isMenuOpen = true">
+                                    <i class="fa fa-bars"></i>
+                                    <!-- <menubar-icon></menubar-icon> -->
+                                    <!-- <img src="assets/images/menu.svg" ng-click="isMenuOpen = true" alt="open menu" /> -->
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="main-content">
+            <div class="container">
+
+            </div>
+        </div>
+
+        <aside class="right-menu" ng-class="{'open': isMenuOpen}">
+            <div class="header">
+                <img src="assets/images/close.svg" ng-click="isMenuOpen = false" alt="close" />
+            </div>
+            <div class="menu-content">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-male"></i>
+                            <span>Męskie</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-female"></i>
+                            <span>Damskie</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-star"></i>
+                            <span>Dodatki</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-footer">
+                <p>
+                    <span>
+                        <a href="#">Pomoc</a>
+                    </span>
+                    <span>
+                        <a href="#">Kontakt</a>
+                    </span>
+                </p>
+            </div>
+        </aside>
+
+        <!-- Core libs -->
+        <script src="core/jquery/jquery.min.js" charset="utf-8"></script>
+        <script src="vendor/tether/tether.min.js" charset="utf-8"></script>
+        <script src="assets/js/plugins/bootstrap/bootstrap.min.js" charset="utf-8"></script>
+        <script src="core/angular/angular.min.js" charset="utf-8"></script>
+        <script src="core/angular/angular-ui-router.min.js" charset="utf-8"></script>
+
+        <script type="text/javascript">
+            (function() {
+                'use strict';
+
+                var mitoApp = angular.module('mitoApp', [
+                    'ui.router',
+                    'components',
+                    'apps'
+                ]);
+            })();
+        </script>
+
+        <!-- MODULES -->
+        <script src="app/components/components.module.js" charset="utf-8"></script>
+        <script src="app/main/main.module.js" charset="utf-8"></script>
+
+        <!-- COMPONENTS -->
+        <script src="app/components/menubar-icon/menubar-icon.component.js" charset="utf-8"></script>
+
+        <!-- CONTROLLERS -->
+        <script src="app/main/controllers/main.controller.js" charset="utf-8"></script>
+
+    </body>
+</html>
