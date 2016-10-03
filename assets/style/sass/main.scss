@@ -15,12 +15,16 @@
 
 // components
 @import "components/menubar-icon";
+@import "components/search-item";
 
 // parts
 @import "parts/header";
 @import "parts/right-menu";
+@import "parts/search-bar";
+@import "parts/search-content";
 
 body {
     font-family: $roboto;
     background-color: $color-background-ec;
+    overflow-x: hidden;
 }

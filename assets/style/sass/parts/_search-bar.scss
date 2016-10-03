@@ -1,0 +1,49 @@
+.search-bar {
+    position: absolute;
+    background: rgba(236, 236, 236, 0.95);
+    left: 0;
+    right: 0;
+    top: 100px;
+    bottom: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+
+    &.open {
+        visibility: visible;
+        opacity: 1;
+    }
+
+    input {
+        width: 50%;
+        margin-top: 30px;
+        height: 60px;
+        border: none;
+        background: transparent;
+        border-bottom: 2px solid $color-grey-6;
+        color: $color-grey-6;
+        font-size: 45px;
+        font-weight: 300;
+        font-family: "Raleway", sans-serif;
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    .description {
+        width: 50%;
+        color: $color-grey-9;
+    }
+
+    .search-container {
+        height: 500px;
+        width: 80%;
+        // background: $color-background-fa;
+    }
+}

@@ -17,19 +17,19 @@
                     <div class="col-xs-6 menu">
                         <ul>
                             <li>
-                                <a href="#">
+                                <a ui-sref="all">
                                     <!-- <img src="assets/images/home.svg" alt="homepage" /> -->
                                     <i class="fa fa-reply"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#">
+                                <a href="#" ng-click="isSearchOpen = !isSearchOpen">
                                     <!-- <img src="assets/images/search.svg" alt="search" /> -->
                                     <i class="fa fa-search"></i>
                                 </a>
                             </li>
                             <li>
-                                <a href="#" ng-click="isMenuOpen = true">
+                                <a ng-click="isMenuOpen = true; isSearchOpen = false">
                                     <i class="fa fa-bars"></i>
                                     <!-- <menubar-icon></menubar-icon> -->
                                     <!-- <img src="assets/images/menu.svg" ng-click="isMenuOpen = true" alt="open menu" /> -->
@@ -41,9 +41,18 @@
             </div>
         </header>
 
+        <div class="search-bar" ng-class="{'open': isSearchOpen}">
+            <input type="text" name="search" value="">
+            <p class="description">Type a keyword to search.</p>
+
+            <div class="search-container">
+                <span>Search results</span>
+            </div>
+        </div>
+
         <div class="main-content">
             <div class="container">
-
+                <ng-view></ng-view>
             </div>
         </div>
 
@@ -90,29 +99,36 @@
         <script src="vendor/tether/tether.min.js" charset="utf-8"></script>
         <script src="assets/js/plugins/bootstrap/bootstrap.min.js" charset="utf-8"></script>
         <script src="core/angular/angular.min.js" charset="utf-8"></script>
-        <script src="core/angular/angular-ui-router.min.js" charset="utf-8"></script>
+        <script src="core/angular/angular-route.min.js" charset="utf-8"></script>
 
         <script type="text/javascript">
             (function() {
                 'use strict';
 
                 var mitoApp = angular.module('mitoApp', [
-                    'ui.router',
+                    'ngRoute',
                     'components',
                     'apps'
                 ]);
             })();
         </script>
 
+        <script src="app/config/mito-app.config.js" charset="utf-8"></script>
+
         <!-- MODULES -->
         <script src="app/components/components.module.js" charset="utf-8"></script>
         <script src="app/main/main.module.js" charset="utf-8"></script>
+        <script src="app/search/search.module.js" charset="utf-8"></script>
+        <script src="app/item/item.module.js" charset="utf-8"></script>
 
         <!-- COMPONENTS -->
         <script src="app/components/menubar-icon/menubar-icon.component.js" charset="utf-8"></script>
+        <script src="app/components/search-item/search-item.component.js" charset="utf-8"></script>
 
         <!-- CONTROLLERS -->
         <script src="app/main/controllers/main.controller.js" charset="utf-8"></script>
+        <script src="app/search/controllers/search.controller.js" charset="utf-8"></script>
+        <script src="app/item/controllers/item.controller.js" charset="utf-8"></script>
 
     </body>
 </html>

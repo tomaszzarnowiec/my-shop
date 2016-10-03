@@ -2,5 +2,8 @@
     'use strict';
 
     angular
-        .module('apps', []);
+        .module('apps', [
+            'searchModule',
+            'itemModule'
+        ]);
 })();

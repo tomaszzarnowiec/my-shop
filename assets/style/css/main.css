@@ -6885,6 +6885,29 @@ menubar-icon {
       width: 17px;
       top: 6px; }
 
+search-item a:hover {
+  text-decoration: none; }
+
+search-item .item {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin-bottom: 100px; }
+  search-item .item .thumb {
+    height: 350px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain; }
+  search-item .item .description {
+    text-transform: uppercase;
+    color: #666666;
+    font-size: 18px;
+    font-weight: 300;
+    margin-top: 20px;
+    text-align: center; }
+
 header {
   height: 100px;
   background: transparent;
@@ -6911,16 +6934,18 @@ header {
             height: 40px; }
 
 .right-menu {
-  position: absolute;
-  right: 0;
+  position: fixed;
+  right: -350px;
   top: 0;
   bottom: 0;
   width: 350px;
   background-color: #fafafa;
-  display: none;
-  flex-direction: column; }
+  flex-direction: column;
+  display: flex;
+  transition: all 0.3s ease-in-out;
+  z-index: 20; }
   .right-menu.open {
-    display: flex; }
+    right: 0px; }
   .right-menu .header {
     height: 100px;
     display: flex;
@@ -6966,6 +6991,48 @@ header {
     .right-menu .menu-footer span:first-child {
       margin-right: 20px; }
 
+.search-bar {
+  position: absolute;
+  background: rgba(236, 236, 236, 0.95);
+  left: 0;
+  right: 0;
+  top: 100px;
+  bottom: 0;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out; }
+  .search-bar.open {
+    visibility: visible;
+    opacity: 1; }
+  .search-bar input {
+    width: 50%;
+    margin-top: 30px;
+    height: 60px;
+    border: none;
+    background: transparent;
+    border-bottom: 2px solid #666666;
+    color: #666666;
+    font-size: 45px;
+    font-weight: 300;
+    font-family: "Raleway", sans-serif; }
+    .search-bar input:focus {
+      outline: none; }
+  .search-bar .description {
+    width: 50%;
+    color: #999999; }
+  .search-bar .search-container {
+    height: 500px;
+    width: 80%; }
+
+.search-content {
+  margin-top: 100px; }
+
 body {
   font-family: "Roboto Condensed", sans-serif;
-  background-color: #ececec; }
+  background-color: #ececec;
+  overflow-x: hidden; }

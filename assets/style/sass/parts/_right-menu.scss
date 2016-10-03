@@ -1,15 +1,17 @@
 .right-menu {
-    position: absolute;
-    right: 0;
+    position: fixed;
+    right: -350px;
     top: 0;
     bottom: 0;
     width: 350px;
     background-color: $color-background-fa;
-    display: none;
     flex-direction: column;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+    z-index: 20;
 
     &.open {
-        display: flex;
+        right: 0px;
     }
 
     .header {

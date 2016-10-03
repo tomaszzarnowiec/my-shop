@@ -11,6 +11,8 @@
     function MainController($scope) {
         var vm = this;
 
+        $scope.isSearchOpen = false;
+
         activate();
 
         function activate() {
