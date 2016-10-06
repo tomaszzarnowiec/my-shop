@@ -20,8 +20,8 @@
                 )
                 .otherwise(
                     {
-                        templateUrl: 'app/search/views/search.html',
-                        controller: 'SearchController'
+                        templateUrl: 'app/main/views/main.html',
+                        controller: 'MainController'
                     }
             );
 

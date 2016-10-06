@@ -15,6 +15,7 @@
 
         function activate() {
             $scope.itemId = $routeParams.id;
+            $('header').addClass('darker');
 
             console.log('item id: ', $scope.itemId);
         }

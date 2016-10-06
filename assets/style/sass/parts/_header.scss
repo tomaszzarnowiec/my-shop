@@ -11,6 +11,7 @@ header {
     .logo, .menu {
         display: flex;
         align-items: center;
+        color: $color-background-ec;
     }
 
     .menu {
@@ -26,13 +27,27 @@ header {
 
                 a {
                     text-decoration: none;
-                    color: $color-grey-5;
+                    color: $color-background-ec;
+
+                    i {
+                        color: $color-background-ec;
+                    }
 
                     img {
                         width: 25px;
                         height: 40px;
                     }
                 }
+            }
+        }
+    }
+
+    &.darker {
+        .logo, .menu ul li a {
+            color: $color-grey-4;
+
+            i {
+                color: $color-grey-4;
             }
         }
     }

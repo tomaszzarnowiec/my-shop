@@ -1,0 +1,24 @@
+<section class="slider">
+    <div class="slider-container" style="width: calc({{sliderModel.count}} * 100%)">
+        <div
+            class="slider-item"
+            style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({{item.background}}); width: calc(100% / {{sliderModel.count}})"
+            ng-repeat="item in sliderModel.items">
+
+            <div class="title-row">
+                <div class="description">
+                    <h1>{{item.title}}</h1>
+                    <a class="btn cta-btn" href="#/item/{{item.id}}">Show this item</a>
+                </div>
+
+                <div class="price">
+                    <span>{{item.price}}</span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <div class="slider-nav">
+        <slider-dot item-id="{{$index}}" model="sliderModel" ng-repeat="item in sliderModel.items"></slider-dot>
+    </div>
+</section>

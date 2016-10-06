@@ -22,9 +22,27 @@
 @import "parts/right-menu";
 @import "parts/search-bar";
 @import "parts/search-content";
+@import "parts/slider";
 
 body {
     font-family: $roboto;
     background-color: $color-background-ec;
     overflow-x: hidden;
+}
+
+a {
+    cursor: pointer;
+}
+
+.cta-btn {
+    color: #fff;
+    background-color: $color-first;
+    border-color: $color-first;
+    margin: 30px auto 0 10px;
+
+    &:hover {
+        background-color: darken($color-first, 5%);
+        border-color: darken($color-first, 5%);
+        color: #fff;
+    }
 }

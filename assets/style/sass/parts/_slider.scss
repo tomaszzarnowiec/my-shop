@@ -1,0 +1,87 @@
+.slider {
+    position: absolute;
+    z-index: 5;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: -1;
+
+    .slider-container {
+        height: 100%;
+        position: absolute;
+        left: 0px;
+        transition: all 1s ease-in-out;
+
+        .slider-item {
+            height: 100%;
+            float: left;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            justify-content: center;
+
+            .title-row {
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                width: 90%;
+
+                .description {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+
+                    h1 {
+                        color: $color-background-fa;
+                        font-size: 90px;
+                        font-family: $raleway;
+                    }
+                }
+
+
+
+                .price {
+                    width: 150px;
+                    height: 150px;
+                    background: $color-first;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    color: $color-background-fa;
+                    font-size: 40px;
+                    font-weight: 100;
+                    font-family: $open-sans;
+                }
+            }
+
+
+        }
+    }
+
+    .slider-nav {
+        position: absolute;
+        bottom: 20px;
+        left: 20px;
+        display: flex;
+
+        .slider-dot {
+            height: 10px;
+            width: 10px;
+            margin: 10px;
+            border-radius: 50%;
+            background-color: $color-background-ec;
+            cursor: pointer;
+            border: 0.5px solid $color-grey-6;
+
+            &.active {
+                background-color: $color-second;
+            }
+        }
+    }
+}

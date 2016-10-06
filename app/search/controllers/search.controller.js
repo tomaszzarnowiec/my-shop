@@ -15,6 +15,7 @@
 
         function activate() {
             console.log('search log', $routeParams.id);
+            $('header').addClass('darker');
         }
     }
 })();
